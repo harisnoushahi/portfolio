@@ -7,10 +7,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{--accent:#0d6efd;}
-    body{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#333; line-height:1.6;}
-    .hero{background: linear-gradient(120deg, rgba(13,110,253,0.08), rgba(13,110,253,0.02));padding:100px 0}
+    body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#333;line-height:1.6;}
+    .hero{background: linear-gradient(120deg, rgba(13,110,253,0.08), rgba(13,110,253,0.02));padding:100px 0;position: relative;overflow: hidden;}
+    .hero::after{content:'';position:absolute;width:200%;height:200%;top:-50%;left:-50%;background:radial-gradient(circle,#0d6efd33 20%,transparent 21%);animation:rotate 20s linear infinite;opacity:.05;}
+    @keyframes rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
     .card-project,.card-service{transition: transform .25s ease, box-shadow .25s ease; border-radius:.5rem; border:none;}
     .card-project:hover,.card-service:hover{transform: translateY(-8px); box-shadow:0 18px 35px rgba(13,110,253,0.12);}
     .project-img,.service-img{height:200px;object-fit:cover;width:100%;border-top-left-radius:.5rem;border-top-right-radius:.5rem;}
@@ -20,6 +23,8 @@
     .btn-primary:hover{background-color:#0b5ed7; border-color:#0a58ca;}
     .navbar .nav-link{font-weight:500;}
     .navbar .btn{font-weight:600;}
+    .form-control:focus{box-shadow:0 0 0 0.2rem rgba(13,110,253,.25);border-color:#0d6efd;}
+    .service-icon{font-size:3rem;color:#0d6efd;}
   </style>
 </head>
 <body>
@@ -44,26 +49,25 @@
   </nav>
 
   <!-- HERO -->
-  <header class="hero">
+  <header class="hero py-5">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
           <h1 class="display-5 fw-bold">Electrical & IT Services — CCTV, Network Infrastructure, Web & Software</h1>
-          <p class="lead text-muted mb-4">I'm Haris Noushahi — an Electronic Technician and freelancer with 15+ years of experience. I help businesses and homes stay secure, connected, and automated.</p>
-          <div class="d-flex gap-2 flex-wrap">
+          <p class="lead text-muted mb-4">
+            I'm <strong>Haris Noushahi</strong> — an Electronic Technician and freelancer with 15+ years of experience. I help businesses and homes stay secure, connected, and automated.
+          </p>
+          <div class="d-flex gap-2 flex-wrap mb-4">
             <a href="#projects" class="btn btn-outline-primary">See Projects</a>
-            <a href="mailto:haris@example.com?subject=Work%20inquiry" class="btn btn-primary">Contact Me</a>
-            <a class="btn btn-sm btn-light border" href="#about"><i class="fa-solid fa-phone me-2"></i>+92-340-2007395</a>
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
+            <a class="btn btn-sm btn-light border" href="#contact">
+              <i class="fa-solid fa-phone me-2"></i>03402007395 / 03333568023
+            </a>
           </div>
         </div>
-        <div class="col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-duration="1000">
-          <div class="card p-3 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1581092795360-8f4d8c8a6c3c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="profile" class="img-fluid rounded" />
-            <div class="mt-3">
-              <h5 class="mb-0">Haris Noushahi</h5>
-              <small class="text-muted">Owner — Volta Systems / Saturn Engineering Works</small>
-              <p class="mt-2 mb-0 small text-muted">Services: CCTV, NVRs, Networking, Fire alarms, PABX, Electrical wiring, Software & Web development.</p>
-            </div>
+        <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-left" data-aos-duration="1000">
+          <div class="bg-light rounded shadow-sm d-flex flex-wrap align-items-center justify-content-center" style="width:100%; max-width:400px; height:400px; gap:15px; padding:20px;">
+            <i class="fa-solid fa-bolt service-icon"></i>
           </div>
         </div>
       </div>
@@ -71,115 +75,74 @@
   </header>
 
   <!-- SERVICES -->
-  <section id="services" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="mb-4 text-center" data-aos="fade-up">Our Services</h2>
+  <section id="services" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="mb-4 text-center">Services</h2>
       <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card card-service h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1590432029352-0f7e4228684f?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="Electrical & Lighting">
-            <div class="card-header">Electrical & Lighting Solutions</div>
-            <div class="card-body">
-              <p>Installation and maintenance of residential, commercial, and industrial electrical and lighting systems with high-quality, cost-effective solutions.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card card-service h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1605902711622-cfb43c443f92?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="CCTV">
-            <div class="card-header">Surveillance Systems</div>
-            <div class="card-body">
-              <p>CCTV solutions including Analog and IP-based systems, remote monitoring, installation, configuration, and maintenance.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="card card-service h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1612883255214-15b77b0f90fc?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="Security">
-            <div class="card-header">Security Systems</div>
-            <div class="card-body">
-              <p>Access control, time management systems, and security solutions for offices, banks, and industrial setups.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card card-service h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1581091012184-df46f3a1adf0?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="IT & Network">
-            <div class="card-header">IT & Communication Solutions</div>
-            <div class="card-body">
-              <p>Network setup, switches, routers, WiFi, and computer maintenance services for businesses of all sizes.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="card card-service h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1610490202375-d0b5d76dcd6b?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="Fire Alarm">
-            <div class="card-header">Fire Alarm Systems</div>
-            <div class="card-body">
-              <p>Conventional and Addressable fire alarms with smoke, heat, flame, and gas detectors. Complete installation and maintenance services.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-          <div class="card card-service h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1591696331110-5ed31b1f0d86?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="Power Solutions">
-            <div class="card-header">Power Solutions</div>
-            <div class="card-body">
-              <p>UPS, solar panels, gas/diesel generators, and air turbines for residential and commercial use, including maintenance services.</p>
-            </div>
-          </div>
-        </div>
+        <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-video service-icon mb-3"></i><h5>CCTV and Surveillance Solutions</h5><p class="text-muted">Complete CCTV solutions including camera selection, installation, NVR configuration, remote access setup, and maintenance.</p></div></div>
+        <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-network-wired service-icon mb-3"></i><h5>Network Infrastructure</h5><p class="text-muted">Structured cabling, RJ45 termination, switch configuration, Wi-Fi setup, and network testing with reports.</p></div></div>
+        <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-plug service-icon mb-3"></i><h5>Electrical Services</h5><p class="text-muted">Residential, commercial, and industrial electrical wiring, troubleshooting, and system maintenance.</p></div></div>
+        <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-bolt service-icon mb-3"></i><h5>UPS and Generator Installation</h5><p class="text-muted">Install and maintain UPS, solar panels, diesel/gas generators, and backup power solutions for homes and offices.</p></div></div>
+        <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-fire-extinguisher service-icon mb-3"></i><h5>Fire Alarms</h5><p class="text-muted">Complete installation and maintenance of conventional and addressable fire alarm systems with smoke, heat, and flame detectors.</p></div></div>
+        <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-phone service-icon mb-3"></i><h5>PABX and Communication Systems</h5><p class="text-muted">Professional PABX installation, telephone systems, intercoms, and office communication solutions.</p></div></div>
+        <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-computer service-icon mb-3"></i><h5>Computer Hardware & Software Troubleshooting</h5><p class="text-muted">Desktop, laptop, and server troubleshooting, repair, maintenance, and optimization for home and office.</p></div></div>
+        <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-wrench service-icon mb-3"></i><h5>Repairing</h5><p class="text-muted">Repair services for electrical appliances, network devices, and IT equipment with guaranteed quality.</p></div></div>
+        <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-code service-icon mb-3"></i><h5>Software and Web Development</h5><p class="text-muted">Custom web and software solutions using PHP, MySQL, HTML, and JavaScript for small businesses and enterprises.</p></div></div>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="py-5">
-    <div class="container">
-      <h2 class="mb-4 text-center" data-aos="fade-up">Key Projects</h2>
+  <section id="projects" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="mb-4 text-center">Projects</h2>
       <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card card-project h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1573164713881-83b8e0a2dc03?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="project-img" alt="Lucky Textile Mills">
-            <div class="card-header">Lucky Textile Mills – June 2014</div>
-            <div class="card-body">
-              <p>Installed addressable fire alarms with 6000 ft UPVC conduit, 200 smoke detectors, and 5 manual call points, completed within the project deadline.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card card-project h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1605902711622-cfb43c443f92?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="project-img" alt="National Foods">
-            <div class="card-header">National Foods – January 2015</div>
-            <div class="card-body">
-              <p>Set up complete office data and voice network, fire alarms, surveillance cameras, cabling, patch panels, and network infrastructure.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="card card-project h-100 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1581091012184-df46f3a1adf0?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="project-img" alt="5 Star Group">
-            <div class="card-header">5 Star Group – August 2015</div>
-            <div class="card-body">
-              <p>Installed video surveillance system in food factory with 6 CCTV cameras, DVR, and 1000 ft cabling for operational efficiency.</p>
-            </div>
-          </div>
-        </div>
+        <div class="col-md-4"><div class="card card-project h-100 p-3 shadow-sm text-center"><i class="fa-solid fa-industry service-icon mb-3"></i><h5>Lucky Textile Mills</h5><p class="text-muted">Installed addressable fire alarms including 200+ smoke detectors, call points, and conduits across the facility in 2014.</p></div></div>
+        <div class="col-md-4"><div class="card card-project h-100 p-3 shadow-sm text-center"><i class="fa-solid fa-warehouse service-icon mb-3"></i><h5>National Foods</h5><p class="text-muted">Installed complete office data & voice network, surveillance cameras, and fire alarm system in 2015.</p></div></div>
+        <div class="col-md-4"><div class="card card-project h-100 p-3 shadow-sm text-center"><i class="fa-solid fa-shop service-icon mb-3"></i><h5>5 Star Group</h5><p class="text-muted">Deployed CCTV cameras and DVR setup for factory surveillance with structured cabling in 2015.</p></div></div>
+        <div class="col-md-4"><div class="card card-project h-100 p-3 shadow-sm text-center"><i class="fa-solid fa-tshirt service-icon mb-3"></i><h5>Rizwan Baig Boutique</h5><p class="text-muted">Fixed surveillance system, replaced faulty DVR hard drive and coaxial cabling for boutique security in 2015.</p></div></div>
+        <div class="col-md-4"><div class="card card-project h-100 p-3 shadow-sm text-center"><i class="fa-solid fa-capsules service-icon mb-3"></i><h5>Coca Cola Warehouse</h5><p class="text-muted">Installed data/voice points and patch panels for new office relocation with full cabling in 2015.</p></div></div>
+        <div class="col-md-4"><div class="card card-project h-100 p-3 shadow-sm text-center"><i class="fa-solid fa-store service-icon mb-3"></i><h5>Saeed Ghani Office & Outlet</h5><p class="text-muted">Installed CCTV, DVR, cabling, and electromagnetic lock for office security with a team in 2015.</p></div></div>
+        <div class="col-md-4"><div class="card card-project h-100 p-3 shadow-sm text-center"><i class="fa-solid fa-hospital service-icon mb-3"></i><h5>Clinic CCTV Upgrade</h5><p class="text-muted">Installed 4 Ezviz 3MP cameras and Wireless NVR with remote access setup in 2025.</p></div></div>
+        <div class="col-md-4"><div class="card card-project h-100 p-3 shadow-sm text-center"><i class="fa-solid fa-building service-icon mb-3"></i><h5>Office Network Cabling</h5><p class="text-muted">Structured cabling and labeling for a multi-floor office with testing and layout report in 2025.</p></div></div>
+        <div class="col-md-4"><div class="card card-project h-100 p-3 shadow-sm text-center"><i class="fa-solid fa-computer service-icon mb-3"></i><h5>Custom POS System</h5><p class="text-muted">Web-based POS and billing system developed using PHP & MySQL for a retail shop in 2025.</p></div></div>
       </div>
     </div>
   </section>
 
-  <footer class="mt-5">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div>© <strong>Haris Noushahi</strong> — Volta Systems / Saturn Engineering Works</div>
-      <div class="text-muted">Professional Electrical & IT Services in Pakistan</div>
+  <!-- CONTACT FORM -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="mb-4 text-center">Get In Touch</h2>
+      <form id="contactForm" class="row g-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="col-12">
+          <input type="text" class="form-control" placeholder="Subject" required>
+        </div>
+        <div class="col-12">
+          <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+        </div>
+        <div class="col-12 d-grid">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
     </div>
-  </footer>
+  </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({once:true});
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thank you! Your message has been sent.');
+      this.reset();
+    });
   </script>
 </body>
 </html>
