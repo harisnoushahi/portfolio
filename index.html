@@ -6,26 +6,26 @@
   <title>Haris Noushahi — Electrical & IT Freelancer</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     :root{--accent:#0d6efd;}
     body{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#333; line-height:1.6;}
-    .hero{background: linear-gradient(120deg, rgba(13,110,253,0.08), rgba(13,110,253,0.02));padding:80px 0}
+    .hero{background: linear-gradient(120deg, rgba(13,110,253,0.08), rgba(13,110,253,0.02));padding:100px 0}
     .card-project,.card-service{transition: transform .25s ease, box-shadow .25s ease; border-radius:.5rem; border:none;}
-    .card-project:hover,.card-service:hover{transform: translateY(-6px); box-shadow:0 14px 30px rgba(13,110,253,0.08)}
-    .skill-bar{height:12px;border-radius:8px;background:#e9ecef;overflow:hidden}
-    .skill-bar > span{display:block;height:100%;border-radius:8px;background:var(--accent)}
+    .card-project:hover,.card-service:hover{transform: translateY(-8px); box-shadow:0 18px 35px rgba(13,110,253,0.12);}
+    .project-img,.service-img{height:200px;object-fit:cover;width:100%;border-top-left-radius:.5rem;border-top-right-radius:.5rem;}
+    h2,h3,h5{color:var(--accent);}
     footer{padding:28px 0;background:#f8f9fa; font-size:.9rem;}
-    .badge-soft{background:rgba(13,110,253,0.08);color:var(--accent);padding:.35rem .6rem;border-radius:.5rem;font-weight:600}
-    .project-img,.service-img{height:180px;object-fit:cover;width:100%;border-top-left-radius:.5rem;border-top-right-radius:.5rem}
-    h2,h3,h5{color:#0d6efd;}
-    ul{padding-left:1.2rem;}
     .card-header{background: var(--accent); color:#fff; font-weight:600;}
+    .btn-primary:hover{background-color:#0b5ed7; border-color:#0a58ca;}
+    .navbar .nav-link{font-weight:500;}
+    .navbar .btn{font-weight:600;}
   </style>
 </head>
 <body>
 
   <!-- NAV -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Haris Noushahi</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -47,7 +47,7 @@
   <header class="hero">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
           <h1 class="display-5 fw-bold">Electrical & IT Services — CCTV, Network Infrastructure, Web & Software</h1>
           <p class="lead text-muted mb-4">I'm Haris Noushahi — an Electronic Technician and freelancer with 15+ years of experience. I help businesses and homes stay secure, connected, and automated.</p>
           <div class="d-flex gap-2 flex-wrap">
@@ -56,7 +56,7 @@
             <a class="btn btn-sm btn-light border" href="#about"><i class="fa-solid fa-phone me-2"></i>+92-340-2007395</a>
           </div>
         </div>
-        <div class="col-lg-5 offset-lg-1">
+        <div class="col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-duration="1000">
           <div class="card p-3 shadow-sm">
             <img src="https://images.unsplash.com/photo-1581092795360-8f4d8c8a6c3c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="profile" class="img-fluid rounded" />
             <div class="mt-3">
@@ -73,9 +73,9 @@
   <!-- SERVICES -->
   <section id="services" class="py-5 bg-light">
     <div class="container">
-      <h2 class="mb-4 text-center">Our Services</h2>
+      <h2 class="mb-4 text-center" data-aos="fade-up">Our Services</h2>
       <div class="row g-4">
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card card-service h-100 shadow-sm">
             <img src="https://images.unsplash.com/photo-1590432029352-0f7e4228684f?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="Electrical & Lighting">
             <div class="card-header">Electrical & Lighting Solutions</div>
@@ -84,7 +84,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card card-service h-100 shadow-sm">
             <img src="https://images.unsplash.com/photo-1605902711622-cfb43c443f92?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="CCTV">
             <div class="card-header">Surveillance Systems</div>
@@ -93,775 +93,16 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
           <div class="card card-service h-100 shadow-sm">
             <img src="https://images.unsplash.com/photo-1612883255214-15b77b0f90fc?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="Security">
             <div class="card-header">Security Systems</div>
-            <div class="card-body">Saturn Engineering Works
-
-Saturn Engineering Works is one of the fastest
-growing organizations in Pakistan to fulfill the
-needs of fire, safety and security equipment. Our
-mission is to provide quality services and
-equipment at low costs for our valued
-customers.
-Saturn Engineering Works was established in
-2013. We ha professional, experienced and
-dedication technicians. We believe in quality
-work at low prices.
-Saturn Engineering Works deals in a variety of
-Electrical and IT Solutions. Our team is
-passionate and dedicated to provide quality
-services.
-
-Saturn Engineering Works
-
-Services
-We deal in following services:
-1. Electrical and Lighting Solutions
-2. Surveillance Systems
-3. Security Systems
-4. IT Solutions
-5. Fire Alarms
-6. Power Solutions
-
-Saturn Engineering Works
-
-Electrical and Lighting Solutions
-
-Electrical and Lighting Solutions are
-essential every residential,
-commercial and industrial buildings.
-There is a large variety of Electrical
-and Lighting Solutions available
-depending on requirement of area, cost,
-wattage and other parameters.
-Saturn Engineering Works not only offers
-installation of Electrical and Lighting Solutions
-but also the maintenance of these systems.
-There are a variety of Electrical and Lighting
-Solutions provided by other organizations but
-Saturn Engineering Works offers the best
-quality equipment as well as the maintenance
-service.
-
-Saturn Engineering Works
-
-Surveillance Systems
-
-A Surveillance System protects
-your property and makes it possible
-for you to observe your property
-from distance without exposing to a
-hazard or danger. Surveillance Systems are
-also able to record every activity takes place in
-their range.
-There is a large variety of closed circuit
-cameras available in the market but there two
-types of surveillance systems such as Analog
-and IP based surveillance systems. Analog
-systems are more popular because of their low
-cost and satisfying results.
-Saturn Engineering Works offers both type of
-surveillance systems according to the needs
-and requirements of our customers.
-
-Saturn Engineering Works
-IT and Communication Solutions
-Computers are playing a
-tremendous role in cheap long
-distance communication but a
-computer is not itself able to
-receive and send information without a data
-communication network.
-Computer data communication networks could
-be wired or wifi based. Wired networks can
-operate over larger distance and large areas
-but wifi is also becoming popular because of
-mobile devices.
-Saturn Engineering Works offers a variety of
-data communication devices such as switches,
-routers, wifi routers/hot spots and computer
-accessories. Saturn Engineering Works also
-offer the maintenance services for not only
-your data communication network but also the
-computers in your network.
-
-Saturn Engineering Works
-Time Management Systems and Access Controls
-Time management systems perform a
-tremendous role in industrial and
-commercial use. Time management
-systems makes it a lot easier for you to
-keep a check on your employee
-attendance and their in-out timings as well which helps
-at the end of the month when making salaries.
-Access controls are used where we need to limit or
-control the access of personnel such as bank lockers,
-government departments and others. Access controls
-can be password protected, as RF-ID based, finger
-print scanner or retina scanner.
-Saturn Engineering Works offers a variety of Time
-management systems and access controls according
-to the requirements. Saturn Engineering Works offers
-complete installation and maintenance of time
-management Systems and access controls.
-
-Saturn Engineering Works
-Fire Alarms
-Fire Alarm systems react when
-there is any smoke in the area. Fire
-alarms are very sensitive electronic
-devices and systems, they are
-capable to detect heat, flame and
-smoke as well.
-Generally there are two types of Fire Alarm Systems,
-Conventional Fire Alarm System and Addressable Fire
-Alarm System. Addressable and Conventional both
-types of fire alarm systems are popular in commercial
-and industrial use. There are three types of fire alarm
-devices like smoke detectors, call points and sounders
-also some additional type of detectors such as heat
-detectors, flame detectors and gas detectors.
-Saturn Engineering Works is one of the fastest growing
-fire alarm companies in Karachi. We offer a vast range
-of fire and smoke alarm services and fire alarm
-solutions. We offer complete installation and
-maintenance of both Addressable and Conventional
-Fire Alarm System according to the need of our
-costumer.
-
-Saturn Engineering Works
-Power Solutions
-Power Solutions play a tremendous role
-where we have Electrical Power issues such
-as power outages and Load shedding
-especially Pakistan where load shedding is a
-daily routine. Installing a power solution is the only way
-to counter these problems.
-Saturn Engineering Works offers power solutions for
-residential and commercial use. We are offering
-Uninterruptable Power Supplies (UPS), Solar Panels,
-Gas and Diesel Generators and Air Turbines
-depending on the requirements. Saturn Engineering
-Works also offer maintenance services for Power
-Solutions.
-
-Saturn Engineering Works
-Projects
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-
-Lucky Textile Mills
-National Foods
-5 Star GroupSaturn Engineering Works
-
-Saturn Engineering Works is one of the fastest
-growing organizations in Pakistan to fulfill the
-needs of fire, safety and security equipment. Our
-mission is to provide quality services and
-equipment at low costs for our valued
-customers.
-Saturn Engineering Works was established in
-2013. We ha professional, experienced and
-dedication technicians. We believe in quality
-work at low prices.
-Saturn Engineering Works deals in a variety of
-Electrical and IT Solutions. Our team is
-passionate and dedicated to provide quality
-services.
-
-Saturn Engineering Works
-
-Services
-We deal in following services:
-1. Electrical and Lighting Solutions
-2. Surveillance Systems
-3. Security Systems
-4. IT Solutions
-5. Fire Alarms
-6. Power Solutions
-
-Saturn Engineering Works
-
-Electrical and Lighting Solutions
-
-Electrical and Lighting Solutions are
-essential every residential,
-commercial and industrial buildings.
-There is a large variety of Electrical
-and Lighting Solutions available
-depending on requirement of area, cost,
-wattage and other parameters.
-Saturn Engineering Works not only offers
-installation of Electrical and Lighting Solutions
-but also the maintenance of these systems.
-There are a variety of Electrical and Lighting
-Solutions provided by other organizations but
-Saturn Engineering Works offers the best
-quality equipment as well as the maintenance
-service.
-
-Saturn Engineering Works
-
-Surveillance Systems
-
-A Surveillance System protects
-your property and makes it possible
-for you to observe your property
-from distance without exposing to a
-hazard or danger. Surveillance Systems are
-also able to record every activity takes place in
-their range.
-There is a large variety of closed circuit
-cameras available in the market but there two
-types of surveillance systems such as Analog
-and IP based surveillance systems. Analog
-systems are more popular because of their low
-cost and satisfying results.
-Saturn Engineering Works offers both type of
-surveillance systems according to the needs
-and requirements of our customers.
-
-Saturn Engineering Works
-IT and Communication Solutions
-Computers are playing a
-tremendous role in cheap long
-distance communication but a
-computer is not itself able to
-receive and send information without a data
-communication network.
-Computer data communication networks could
-be wired or wifi based. Wired networks can
-operate over larger distance and large areas
-but wifi is also becoming popular because of
-mobile devices.
-Saturn Engineering Works offers a variety of
-data communication devices such as switches,
-routers, wifi routers/hot spots and computer
-accessories. Saturn Engineering Works also
-offer the maintenance services for not only
-your data communication network but also the
-computers in your network.
-
-Saturn Engineering Works
-Time Management Systems and Access Controls
-Time management systems perform a
-tremendous role in industrial and
-commercial use. Time management
-systems makes it a lot easier for you to
-keep a check on your employee
-attendance and their in-out timings as well which helps
-at the end of the month when making salaries.
-Access controls are used where we need to limit or
-control the access of personnel such as bank lockers,
-government departments and others. Access controls
-can be password protected, as RF-ID based, finger
-print scanner or retina scanner.
-Saturn Engineering Works offers a variety of Time
-management systems and access controls according
-to the requirements. Saturn Engineering Works offers
-complete installation and maintenance of time
-management Systems and access controls.
-
-Saturn Engineering Works
-Fire Alarms
-Fire Alarm systems react when
-there is any smoke in the area. Fire
-alarms are very sensitive electronic
-devices and systems, they are
-capable to detect heat, flame and
-smoke as well.
-Generally there are two types of Fire Alarm Systems,
-Conventional Fire Alarm System and Addressable Fire
-Alarm System. Addressable and Conventional both
-types of fire alarm systems are popular in commercial
-and industrial use. There are three types of fire alarm
-devices like smoke detectors, call points and sounders
-also some additional type of detectors such as heat
-detectors, flame detectors and gas detectors.
-Saturn Engineering Works is one of the fastest growing
-fire alarm companies in Karachi. We offer a vast range
-of fire and smoke alarm services and fire alarm
-solutions. We offer complete installation and
-maintenance of both Addressable and Conventional
-Fire Alarm System according to the need of our
-costumer.
-
-Saturn Engineering Works
-Power Solutions
-Power Solutions play a tremendous role
-where we have Electrical Power issues such
-as power outages and Load shedding
-especially Pakistan where load shedding is a
-daily routine. Installing a power solution is the only way
-to counter these problems.
-Saturn Engineering Works offers power solutions for
-residential and commercial use. We are offering
-Uninterruptable Power Supplies (UPS), Solar Panels,
-Gas and Diesel Generators and Air Turbines
-depending on the requirements. Saturn Engineering
-Works also offer maintenance services for Power
-Solutions.
-
-Saturn Engineering Works
-Projects
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-
-Lucky Textile Mills
-National Foods
-5 Star Group
-Rizwan Baig Boutique
-Coca Cola
-Saeed Ghani
-Tech Access Pakistan
-
-Saturn Engineering Works
-1. Lucky Textile Mills – June 2014
-Lucky textile mills was the first project of Saturn Engineering Works, We
-were assigned to install addressable fire alarms in their new building. During
-installation about 6000 foots of UPVC conduit and Belden cable was
-required for the loop. There were more than 200 Smoke detectors and
-about 5 Manual call points were mounted at the entries and exits and they
-were addressed by our team. Hopefully our team the team's hard work and
-perseverance allowed us to finish the project within prescribed deadline.
-
-Saturn Engineering Works
-2. National Foods – January 2015
-At National Foods HR we were assigned to install their complete office data and voice
-network, including their 30 I/O ports, 12 U Panel Box and 64 Ports Patch panel, four
-back bone cables, two wifi access points, a two zones conventional Fire Alarms
-System, three surveillance cameras and a DVR. The networking job required about
-2000 foots of category-6 cable,900 foots of 1.5 mm Cable for alarms and hundred
-foots coaxial and power cable for CCTV. Two men worked for about Four days to get
-these systems operational.
-
-Saturn Engineering Works
-3. 5 Star Group – August 2015
-The 5 star is a group of industries which not only provide construction
-or engineering services but also manufactures some food items. At their
-foods factory we were assigned to install video surveillance system which
-included six CCTV cameras, DVR and about one thousand foots of CCTV
-cable. Two men worked for about two days to make that system operational.
-
-Saturn Engineering Works
-4. Rizwan Baig’s Boutique – September 2015
-At Rizwan Baig’s Boutique, their video surveillance system was down
-and their DVR was not recording any videos at all and the system was
-not online either. By diagnosis we found out a faulty hard drive and
-broken coaxial cables. Our two men worked for about 4 hours to
-rectify that problem.
-5. Coca Cola – October 2015
-At coca cola warehouse they were moving their cash office to another
-place, so they required four data and 4 voice I/O points, about 500
-foots of category-6 cable and a patch panel. Two men worked for six
-hours to complete the job.
-
-6. Saeed Ghani Office and Outlet
-At Saeed Ghani sales office we were assigned to install video
-surveillance system, including four CCTV Cameras and a four channel
-DVR and about 300 foots of cabling. We also installed an
-Electromagnetic lock in their office. Our four men worked for one day
-to complete the job.
-
-Saturn Engineering Works
-7. Tech Access Pakistan
- Guest house project: At TAP guest house we were assigned to
-install a video surveillance system including six AHD Cameras, a
-DVR and it required about 1000 foots of cabling. The system was
-also required to be viewed from remote locations. Our two men
-worked for about two days to make the system operational.
-
-Saturn Engineering Works
- TAP Karachi Office: At TAP office the requirement was four AHD
-Cameras, a DVR and a smart LED TV to view both footages in their
-general manager’s cabin. Our two men worked for two days to make
-the system operational.
-
-Company Information
-Company Name
-
-Saturn Engineering Works
-
-Nature of Work
-
-Service and Solution Provider regarding CCTV, Fire
-Alarms, Access Controls, Networking, Power
-Solutions, GSM Equipment
-Applied for NTN
-Applied for PEC License
-saturn-eng@hotmail.comSaturn Engineering Works
-
-Saturn Engineering Works is one of the fastest
-growing organizations in Pakistan to fulfill the
-needs of fire, safety and security equipment. Our
-mission is to provide quality services and
-equipment at low costs for our valued
-customers.
-Saturn Engineering Works was established in
-2013. We ha professional, experienced and
-dedication technicians. We believe in quality
-work at low prices.
-Saturn Engineering Works deals in a variety of
-Electrical and IT Solutions. Our team is
-passionate and dedicated to provide quality
-services.
-
-Saturn Engineering Works
-
-Services
-We deal in following services:
-1. Electrical and Lighting Solutions
-2. Surveillance Systems
-3. Security Systems
-4. IT Solutions
-5. Fire Alarms
-6. Power Solutions
-
-Saturn Engineering Works
-
-Electrical and Lighting Solutions
-
-Electrical and Lighting Solutions are
-essential every residential,
-commercial and industrial buildings.
-There is a large variety of Electrical
-and Lighting Solutions available
-depending on requirement of area, cost,
-wattage and other parameters.
-Saturn Engineering Works not only offers
-installation of Electrical and Lighting Solutions
-but also the maintenance of these systems.
-There are a variety of Electrical and Lighting
-Solutions provided by other organizations but
-Saturn Engineering Works offers the best
-quality equipment as well as the maintenance
-service.
-
-Saturn Engineering Works
-
-Surveillance Systems
-
-A Surveillance System protects
-your property and makes it possible
-for you to observe your property
-from distance without exposing to a
-hazard or danger. Surveillance Systems are
-also able to record every activity takes place in
-their range.
-There is a large variety of closed circuit
-cameras available in the market but there two
-types of surveillance systems such as Analog
-and IP based surveillance systems. Analog
-systems are more popular because of their low
-cost and satisfying results.
-Saturn Engineering Works offers both type of
-surveillance systems according to the needs
-and requirements of our customers.
-
-Saturn Engineering Works
-IT and Communication Solutions
-Computers are playing a
-tremendous role in cheap long
-distance communication but a
-computer is not itself able to
-receive and send information without a data
-communication network.
-Computer data communication networks could
-be wired or wifi based. Wired networks can
-operate over larger distance and large areas
-but wifi is also becoming popular because of
-mobile devices.
-Saturn Engineering Works offers a variety of
-data communication devices such as switches,
-routers, wifi routers/hot spots and computer
-accessories. Saturn Engineering Works also
-offer the maintenance services for not only
-your data communication network but also the
-computers in your network.
-
-Saturn Engineering Works
-Time Management Systems and Access Controls
-Time management systems perform a
-tremendous role in industrial and
-commercial use. Time management
-systems makes it a lot easier for you to
-keep a check on your employee
-attendance and their in-out timings as well which helps
-at the end of the month when making salaries.
-Access controls are used where we need to limit or
-control the access of personnel such as bank lockers,
-government departments and others. Access controls
-can be password protected, as RF-ID based, finger
-print scanner or retina scanner.
-Saturn Engineering Works offers a variety of Time
-management systems and access controls according
-to the requirements. Saturn Engineering Works offers
-complete installation and maintenance of time
-management Systems and access controls.
-
-Saturn Engineering Works
-Fire Alarms
-Fire Alarm systems react when
-there is any smoke in the area. Fire
-alarms are very sensitive electronic
-devices and systems, they are
-capable to detect heat, flame and
-smoke as well.
-Generally there are two types of Fire Alarm Systems,
-Conventional Fire Alarm System and Addressable Fire
-Alarm System. Addressable and Conventional both
-types of fire alarm systems are popular in commercial
-and industrial use. There are three types of fire alarm
-devices like smoke detectors, call points and sounders
-also some additional type of detectors such as heat
-detectors, flame detectors and gas detectors.
-Saturn Engineering Works is one of the fastest growing
-fire alarm companies in Karachi. We offer a vast range
-of fire and smoke alarm services and fire alarm
-solutions. We offer complete installation and
-maintenance of both Addressable and Conventional
-Fire Alarm System according to the need of our
-costumer.
-
-Saturn Engineering Works
-Power Solutions
-Power Solutions play a tremendous role
-where we have Electrical Power issues such
-as power outages and Load shedding
-especially Pakistan where load shedding is a
-daily routine. Installing a power solution is the only way
-to counter these problems.
-Saturn Engineering Works offers power solutions for
-residential and commercial use. We are offering
-Uninterruptable Power Supplies (UPS), Solar Panels,
-Gas and Diesel Generators and Air Turbines
-depending on the requirements. Saturn Engineering
-Works also offer maintenance services for Power
-Solutions.
-
-Saturn Engineering Works
-Projects
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-
-Lucky Textile Mills
-National Foods
-5 Star Group
-Rizwan Baig Boutique
-Coca Cola
-Saeed Ghani
-Tech Access Pakistan
-
-Saturn Engineering Works
-1. Lucky Textile Mills – June 2014
-Lucky textile mills was the first project of Saturn Engineering Works, We
-were assigned to install addressable fire alarms in their new building. During
-installation about 6000 foots of UPVC conduit and Belden cable was
-required for the loop. There were more than 200 Smoke detectors and
-about 5 Manual call points were mounted at the entries and exits and they
-were addressed by our team. Hopefully our team the team's hard work and
-perseverance allowed us to finish the project within prescribed deadline.
-
-Saturn Engineering Works
-2. National Foods – January 2015
-At National Foods HR we were assigned to install their complete office data and voice
-network, including their 30 I/O ports, 12 U Panel Box and 64 Ports Patch panel, four
-back bone cables, two wifi access points, a two zones conventional Fire Alarms
-System, three surveillance cameras and a DVR. The networking job required about
-2000 foots of category-6 cable,900 foots of 1.5 mm Cable for alarms and hundred
-foots coaxial and power cable for CCTV. Two men worked for about Four days to get
-these systems operational.
-
-Saturn Engineering Works
-3. 5 Star Group – August 2015
-The 5 star is a group of industries which not only provide construction
-or engineering services but also manufactures some food items. At their
-foods factory we were assigned to install video surveillance system which
-included six CCTV cameras, DVR and about one thousand foots of CCTV
-cable. Two men worked for about two days to make that system operational.
-
-Saturn Engineering Works
-4. Rizwan Baig’s Boutique – September 2015
-At Rizwan Baig’s Boutique, their video surveillance system was down
-and their DVR was not recording any videos at all and the system was
-not online either. By diagnosis we found out a faulty hard drive and
-broken coaxial cables. Our two men worked for about 4 hours to
-rectify that problem.
-5. Coca Cola – October 2015
-At coca cola warehouse they were moving their cash office to another
-place, so they required four data and 4 voice I/O points, about 500
-foots of category-6 cable and a patch panel. Two men worked for six
-hours to complete the job.
-
-6. Saeed Ghani Office and Outlet
-At Saeed Ghani sales office we were assigned to install video
-surveillance system, including four CCTV Cameras and a four channel
-DVR and about 300 foots of cabling. We also installed an
-Electromagnetic lock in their office. Our four men worked for one day
-to complete the job.
-
-Saturn Engineering Works
-7. Tech Access Pakistan
- Guest house project: At TAP guest house we were assigned to
-install a video surveillance system including six AHD Cameras, a
-DVR and it required about 1000 foots of cabling. The system was
-also required to be viewed from remote locations. Our two men
-worked for about two days to make the system operational.
-
-Saturn Engineering Works
- TAP Karachi Office: At TAP office the requirement was four AHD
-Cameras, a DVR and a smart LED TV to view both footages in their
-general manager’s cabin. Our two men worked for two days to make
-the system operational.
-
-Company Information
-Company Name
-
-Saturn Engineering Works
-
-Nature of Work
-
-Service and Solution Provider regarding CCTV, Fire
-Alarms, Access Controls, Networking, Power
-Solutions, GSM Equipment
-Applied for NTN
-Applied for PEC License
-saturn-eng@hotmail.com
-https://www.facebook.comSaturnEngineering
-Works
-0340-2007395 / 0333-3568023
-
-National Tax Number
-PEC Contracting License
-Company Email
-Website
-Contact Number
-
-
-https://www.facebook.comSaturnEngineering
-Works
-0340-2007395 / 0333-3568023
-
-National Tax Number
-PEC Contracting License
-Company Email
-Website
-Contact Number
-
-
-Rizwan Baig Boutique
-Coca Cola
-Saeed Ghani
-Tech Access Pakistan
-
-Saturn Engineering Works
-1. Lucky Textile Mills – June 2014
-Lucky textile mills was the first project of Saturn Engineering Works, We
-were assigned to install addressable fire alarms in their new building. During
-installation about 6000 foots of UPVC conduit and Belden cable was
-required for the loop. There were more than 200 Smoke detectors and
-about 5 Manual call points were mounted at the entries and exits and they
-were addressed by our team. Hopefully our team the team's hard work and
-perseverance allowed us to finish the project within prescribed deadline.
-
-Saturn Engineering Works
-2. National Foods – January 2015
-At National Foods HR we were assigned to install their complete office data and voice
-network, including their 30 I/O ports, 12 U Panel Box and 64 Ports Patch panel, four
-back bone cables, two wifi access points, a two zones conventional Fire Alarms
-System, three surveillance cameras and a DVR. The networking job required about
-2000 foots of category-6 cable,900 foots of 1.5 mm Cable for alarms and hundred
-foots coaxial and power cable for CCTV. Two men worked for about Four days to get
-these systems operational.
-
-Saturn Engineering Works
-3. 5 Star Group – August 2015
-The 5 star is a group of industries which not only provide construction
-or engineering services but also manufactures some food items. At their
-foods factory we were assigned to install video surveillance system which
-included six CCTV cameras, DVR and about one thousand foots of CCTV
-cable. Two men worked for about two days to make that system operational.
-
-Saturn Engineering Works
-4. Rizwan Baig’s Boutique – September 2015
-At Rizwan Baig’s Boutique, their video surveillance system was down
-and their DVR was not recording any videos at all and the system was
-not online either. By diagnosis we found out a faulty hard drive and
-broken coaxial cables. Our two men worked for about 4 hours to
-rectify that problem.
-5. Coca Cola – October 2015
-At coca cola warehouse they were moving their cash office to another
-place, so they required four data and 4 voice I/O points, about 500
-foots of category-6 cable and a patch panel. Two men worked for six
-hours to complete the job.
-
-6. Saeed Ghani Office and Outlet
-At Saeed Ghani sales office we were assigned to install video
-surveillance system, including four CCTV Cameras and a four channel
-DVR and about 300 foots of cabling. We also installed an
-Electromagnetic lock in their office. Our four men worked for one day
-to complete the job.
-
-Saturn Engineering Works
-7. Tech Access Pakistan
- Guest house project: At TAP guest house we were assigned to
-install a video surveillance system including six AHD Cameras, a
-DVR and it required about 1000 foots of cabling. The system was
-also required to be viewed from remote locations. Our two men
-worked for about two days to make the system operational.
-
-Saturn Engineering Works
- TAP Karachi Office: At TAP office the requirement was four AHD
-Cameras, a DVR and a smart LED TV to view both footages in their
-general manager’s cabin. Our two men worked for two days to make
-the system operational.
-
-Company Information
-Company Name
-
-Saturn Engineering Works
-
-Nature of Work
-
-Service and Solution Provider regarding CCTV, Fire
-Alarms, Access Controls, Networking, Power
-Solutions, GSM Equipment
-Applied for NTN
-Applied for PEC License
-saturn-eng@hotmail.com
-https://www.facebook.comSaturnEngineering
-Works
-0340-2007395 / 0333-3568023
-
-National Tax Number
-PEC Contracting License
-Company Email
-Website
-Contact Number
-
-
+            <div class="card-body">
               <p>Access control, time management systems, and security solutions for offices, banks, and industrial setups.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
           <div class="card card-service h-100 shadow-sm">
             <img src="https://images.unsplash.com/photo-1581091012184-df46f3a1adf0?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="IT & Network">
             <div class="card-header">IT & Communication Solutions</div>
@@ -870,7 +111,7 @@ Contact Number
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
           <div class="card card-service h-100 shadow-sm">
             <img src="https://images.unsplash.com/photo-1610490202375-d0b5d76dcd6b?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="Fire Alarm">
             <div class="card-header">Fire Alarm Systems</div>
@@ -879,7 +120,7 @@ Contact Number
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
           <div class="card card-service h-100 shadow-sm">
             <img src="https://images.unsplash.com/photo-1591696331110-5ed31b1f0d86?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="service-img" alt="Power Solutions">
             <div class="card-header">Power Solutions</div>
@@ -895,9 +136,9 @@ Contact Number
   <!-- PROJECTS -->
   <section id="projects" class="py-5">
     <div class="container">
-      <h2 class="mb-4 text-center">Key Projects</h2>
+      <h2 class="mb-4 text-center" data-aos="fade-up">Key Projects</h2>
       <div class="row g-4">
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card card-project h-100 shadow-sm">
             <img src="https://images.unsplash.com/photo-1573164713881-83b8e0a2dc03?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="project-img" alt="Lucky Textile Mills">
             <div class="card-header">Lucky Textile Mills – June 2014</div>
@@ -906,7 +147,7 @@ Contact Number
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card card-project h-100 shadow-sm">
             <img src="https://images.unsplash.com/photo-1605902711622-cfb43c443f92?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="project-img" alt="National Foods">
             <div class="card-header">National Foods – January 2015</div>
@@ -915,7 +156,7 @@ Contact Number
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
           <div class="card card-project h-100 shadow-sm">
             <img src="https://images.unsplash.com/photo-1581091012184-df46f3a1adf0?crop=entropy&cs=tinysrgb&fit=max&h=180&w=400" class="project-img" alt="5 Star Group">
             <div class="card-header">5 Star Group – August 2015</div>
@@ -936,5 +177,9 @@ Contact Number
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true});
+  </script>
 </body>
 </html>
