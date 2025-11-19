@@ -11,6 +11,8 @@
   <style>
     :root{--accent:#0d6efd;}
     body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#333;line-height:1.6;}
+    html{scroll-behavior: smooth;}
+    section{scroll-margin-top: 80px;} /* offset for fixed navbar */
     .hero{background: linear-gradient(120deg, rgba(13,110,253,0.08), rgba(13,110,253,0.02));padding:100px 0;position: relative;overflow: hidden;}
     .hero::after{content:'';position:absolute;width:200%;height:200%;top:-50%;left:-50%;background:radial-gradient(circle,#0d6efd33 20%,transparent 21%);animation:rotate 20s linear infinite;opacity:.05;}
     @keyframes rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
@@ -74,7 +76,7 @@ I'm <strong>Haris Noushahi</strong>, an Electrical & IT Systems Expert with a DA
           </div>
         </div>
 
-        <!-- FULL-WIDTH HERO IMAGE -->
+        <!-- HERO IMAGE -->
         <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
           <div class="hero-banner">
             <img src="banner.jpg" class="img-fluid rounded shadow-lg" alt="Tech Illustration">
@@ -84,6 +86,31 @@ I'm <strong>Haris Noushahi</strong>, an Electrical & IT Systems Expert with a DA
       </div>
     </div>
   </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="mb-4 text-center">About Me</h2>
+      <p>
+        My name is <strong>Haris Noushahi</strong>, a certified Electrical Engineer, Programmer, Developer, and Designer with a passion for technology and innovation. I specialize in providing comprehensive solutions across software, hardware, and engineering systems. With years of hands-on experience, I strive to deliver reliable and efficient technology services to businesses and individuals alike.
+      </p>
+      <p>
+        I am the founder of <strong>Volta Systems</strong> and <strong>Saturn Engineering Works</strong>. At Volta Systems, we focus on computer hardware and software troubleshooting, custom web and software development, and system design. Our team works on designing robust solutions that are scalable, secure, and optimized for performance. At Saturn Engineering Works, we specialize in installation, maintenance, and troubleshooting of CCTV systems, fire alarms, PABX systems, and advanced computer security setups.
+      </p>
+      <p>
+        Throughout my career, I have acquired multiple diplomas and professional certifications, which allow me to combine technical expertise with practical problem-solving skills. My certifications cover electrical engineering, programming, software development, and system design, enabling me to handle complex projects across different domains with confidence.
+      </p>
+      <p>
+        My approach is always client-focused: understanding needs, analyzing challenges, and providing tailored solutions that enhance productivity, security, and efficiency. I continuously update my knowledge to keep pace with emerging technologies, ensuring the solutions I provide are both modern and future-proof.
+      </p>
+      <p>
+        Beyond technical skills, I bring a creative mindset to every project, integrating design, engineering, and software development to produce cohesive and high-quality outcomes. Whether it’s developing software, designing a network system, or implementing a security solution, my goal is always to combine reliability, innovation, and excellence.
+      </p>
+      <p>
+        I believe in the power of technology to transform businesses and improve lives. Through Volta Systems and Saturn Engineering Works, I have helped clients achieve seamless operations, secure environments, and efficient digital workflows. My dedication to continuous learning, professional integrity, and problem-solving makes me a reliable partner for any technology-driven project.
+      </p>
+    </div>
+  </section>
 
   <!-- SERVICES -->
   <section id="services" class="py-5">
@@ -98,7 +125,7 @@ I'm <strong>Haris Noushahi</strong>, an Electrical & IT Systems Expert with a DA
         <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-phone service-icon mb-3"></i><h5>PABX and Communication Systems</h5><p class="text-muted">Professional PABX installation, telephone systems, intercoms, and office communication solutions.</p></div></div>
         <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-computer service-icon mb-3"></i><h5>Computer Hardware & Software Troubleshooting</h5><p class="text-muted">Desktop, laptop, and server troubleshooting, repair, maintenance, and optimization for home and office.</p></div></div>
         <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-wrench service-icon mb-3"></i><h5>Repairing</h5><p class="text-muted">Repair services for electrical appliances, network devices, and IT equipment with guaranteed quality.</p></div></div>
-        <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-code service-icon mb-3"></i><h5>Software and Web Development</h5><p class="text-muted">Custom web and software solutions using PHP, MySQL, HTML, and JavaScript for small businesses and enterprises.Especially POS systems for retail and restaurant businesses.</p></div></div>
+        <div class="col-md-4"><div class="card card-service h-100 text-center p-3 shadow-sm"><i class="fa-solid fa-code service-icon mb-3"></i><h5>Software and Web Development</h5><p class="text-muted">Custom web and software solutions using PHP, MySQL, HTML, and JavaScript for small businesses and enterprises. Especially POS systems for retail and restaurant businesses.</p></div></div>
       </div>
     </div>
   </section>
