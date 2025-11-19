@@ -25,6 +25,12 @@
     .navbar .btn{font-weight:600;}
     .form-control:focus{box-shadow:0 0 0 0.2rem rgba(13,110,253,.25);border-color:#0d6efd;}
     .service-icon{font-size:3rem;color:#0d6efd;}
+    /* SVG hero styles */
+    .hero-illustration{width:100%;max-width:420px;height:400px;display:flex;align-items:center;justify-content:center}
+    .illustration-svg{width:90%;height:90%}
+    .svg-stroke{stroke:var(--accent);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .svg-fill{fill:var(--accent)}
+    @media (max-width:991px){.hero{padding:60px 0}.hero-illustration{max-width:320px;height:320px}}
   </style>
 </head>
 <body>
@@ -52,10 +58,13 @@
   <header class="hero py-5">
     <div class="container">
       <div class="row align-items-center">
+        
+        <!-- TEXT -->
         <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
           <h1 class="display-5 fw-bold">Electrical & IT Services — CCTV, Network Infrastructure, Web & Software</h1>
           <p class="lead text-muted mb-4">
-            I'm <strong>Haris Noushahi</strong> — an Electronic Technician and freelancer with 15+ years of experience. I help businesses and homes stay secure, connected, and automated.
+            I'm <strong>Haris Noushahi</strong> — an Electronic Technician and freelancer with 15+ years of experience. 
+            I help businesses and homes stay secure, connected, and automated.
           </p>
           <div class="d-flex gap-2 flex-wrap mb-4">
             <a href="#projects" class="btn btn-outline-primary">See Projects</a>
@@ -65,11 +74,14 @@
             </a>
           </div>
         </div>
-        <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-left" data-aos-duration="1000">
-          <div class="bg-light rounded shadow-sm d-flex flex-wrap align-items-center justify-content-center" style="width:100%; max-width:400px; height:400px; gap:15px; padding:20px;">
-            <img src="banner.jpg">
+
+        <!-- FULL-WIDTH HERO IMAGE -->
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="hero-banner">
+            <img src="https://images.unsplash.com/photo-1581092334420-8ec8ea5a8db0?auto=format&fit=crop&w=900&q=80" class="img-fluid rounded shadow-lg" alt="Tech Illustration">
           </div>
         </div>
+
       </div>
     </div>
   </header>
